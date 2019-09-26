@@ -75,7 +75,7 @@ main (int argc, char *argv[])
 
   uint16_t port = 9;   // Discard port (RFC 863)
   BulkSendHelper source ("ns3::TcpSocketFactory",
-                         InetSocketAddress (i0i2.GetAddress (1), port));
+                         InetSocketAddress (i2i3.GetAddress (1), port));
   // Set the amount of data to send in bytes.  Zero is unlimited.
   source.SetAttribute ("MaxBytes", UintegerValue (0));
   ApplicationContainer apps = source.Install (n0n2.Get (0));
